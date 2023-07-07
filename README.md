@@ -5,6 +5,10 @@
 ```
 php -S localhost:8000
 ```
+#### Comando para rodar um arquivo php no terminal
+```
+php nomeDoArquivo.php
+```
 
 ## Aula 1
 ### Vantagens de POO
@@ -138,7 +142,7 @@ c1.getPonta()
         }
         ```
     - Utilizando o PHP ficará assim:
-        ```
+        ```php
         class Caneta{
             function __construct(){
                 $this->tampar();
@@ -147,9 +151,9 @@ c1.getPonta()
         }
         ```
         ou
-        ```
+        ```php
         class Caneta{
-            public function Caneta($m, $c, $p){
+            - Caneta($m, $c, $p){
                 $this->modelo = $m;
                 $this->cor = $c;
                 $this->ponta = $p;
@@ -188,3 +192,51 @@ c1.getPonta()
     - sacar();
     - depositar();
     - pagarMensalidade();
+
+## Aula 6
+### Pilares de POO
+- Encapsulamento
+- Herança
+- Polimorfismo
+
+### Encapsulamento
+#### Descrisção
+-  Um software encapsulado tem um padrão, além de proteger o código do usuário e proteger o usuário do código. Pense como uma pilha AA, nela há uma capa para seus componentes que realização funcionamento para que em seus polos disseminem a energia, essa capa serve para que o usuário não mexa e danifique seus componentes internos, e nem que os componentes vazem e prejudiquem o usuário, além de que essa capa irá servir como um padrão para todas pilhas AA, então qualquer objeto que receber pilhas AA, poderão receber de qualquer fabricante, descártavel ou recarregável contanto que sejam pilhas AA.
+
+#### Encapsular
+-  Ocultar partes independentes da implementação permitindo construir partes invísiveis ao mundo exterior.
+
+#### Interface
+- Lista de serviços fornecidos por um componente. É o contato com o mundo exterior, que define o que pode ser feito com um objeto dessa classe
+
+#### Vantagens de Encapsular
+- Tornar mudanças invisíveis;
+- Facilitar reutilização de código;
+- Reduzir efeitos colaterais;
+
+#### Exercício
+- Crie uma interface com os métodos que serão implementados em uma classe de um controle remoto;
+- A interface deve conter os seguintes métodos:
+    - ligar;
+    - desligar;
+    - abrirMenu;
+    - fecharMenu;
+    - maisVolume;
+    - menosVolume;
+    - ligarMudo;
+    - desligarMudo;
+    - play;
+    - pause;
+- A classe Controle deve ter os seguintes atributos:
+    - volume;
+    - ligado;
+    - tocando;
+
+## Aula 7 e 8
+### Relacionamento entre classes
+
+#### Regras da classe Luta
+- Uma luta só pode acontecer entre lutadores da mesma classe;
+- A luta só acontece entre lutadores diferentes;
+- A luta só pode acontecer se for aprovada;
+- Na luta só pode haver a vitória de um único lutador ou então um empate;
