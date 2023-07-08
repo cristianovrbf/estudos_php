@@ -240,3 +240,39 @@ c1.getPonta()
 - A luta só acontece entre lutadores diferentes;
 - A luta só pode acontecer se for aprovada;
 - Na luta só pode haver a vitória de um único lutador ou então um empate;
+
+
+## Aula 10
+### Herança entre classes
+- Permite basear uma nova classe na definição de uma outra classe previamente existente.
+- A herança será aplicada tanto para as características quanto para os comportamentos.  
+
+#### Exemplo
+- Em uma instituição de ensino temos três indivíduos, um aluno no qual eles tem nome, idade, sexo, matrícula, curso e pode realizar aniversário e cancelar matrícula; temos um professor no qual tem nome, idade, sexo, especialidade, salário e pode realizar aniversário e receber aumento; e por último temos um funcionário que tem nome, idade, sexo, setor que trabalho, se está trabalhando ou não e pode fazer aniversário e mudar status se está trabalhando. Seguindo esse exemplo temos as seguintes classes:
+
+|   **Aluno**   |       |  **Professor** |       |   **Aluno**   |
+| ------------- |       | -------------- |       | ------------- |
+|  - nome       |       |  - nome        |       |  - nome       |
+|  - sexo       |       |  - nome        |       |  - nome       |
+|  - idade      |       |  - idade       |       |  - idade      |
+|  - matrícula  |       |  - salário     |       |  -trabalhando |
+|  - curso      |       |  -especialidade|       |  - setor      |
+| ------------  |       | -------------- |       | ------------  |
+| +fazerAniv()  |       | +fazerAniv()   |       | +fazerAniv()  |
+| +cancelarMat()|       | +receberAume() |       | +mudarTrabal()|
+
+- Dessa forma irão se repetir muitos atributos e métodos, sendo assim usamos a herança para que possamos diminuir a quantidade de linhas repetidas. Utilizando o conceito de herança ficaria da seguinte forma:
+
+| **Pessoa** |
+| ---------- |      |   **Aluno**   |       |  **Professor** |       |   **Aluno**   |
+| - nome     |      | ------------- |       | -------------- |       | ------------- |
+| - sexo     |      |  - matrícula  |       |  - salário     |       |  -trabalhando |
+| - idade    |      |  - curso      |       |  -especialidade|       |  - setor      |
+| ---------  |      | ------------  |       | -------------- |       | ------------  |
+|+fazerAniv()|      | +cancelarMat()|       | +receberAume() |       | +mudarTrabal()|
+
+- Utilizando os conceitos de herança acima, teremos uma classe pessoa que irá ser extendida para as classes Aluno, Professor e Funcionário, sendo assim as três classes (Aluno, Professor e Funcionário) irão herdar os atributor e métodos da classe Pessoa. 
+
+- A classe pessoa será a Classe Mãe (ou Progenitora ou Superclasse).
+- As classes Aluno, Professor e Funcionário serão Classes Filhas (ou Subclasses).
+
