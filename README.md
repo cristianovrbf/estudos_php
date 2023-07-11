@@ -264,12 +264,33 @@ c1.getPonta()
 - Dessa forma irão se repetir muitos atributos e métodos, sendo assim usamos a herança para que possamos diminuir a quantidade de linhas repetidas. Utilizando o conceito de herança ficaria da seguinte forma:
 
 | **Pessoa** |
-| ---------- |   **Aluno**   |  **Professor** |   **Aluno**   |
-| - nome     | ------------- | -------------- | ------------- |
-| - sexo     |  - matrícula  |  - salário     |  -trabalhando |
-| - idade    |  - curso      |  -especialidade|  - setor      |
-| ---------  | ------------  | -------------- | ------------  |
-|+fazerAniv()| +cancelarMat()| +receberAume() | +mudarTrabal()|
+| ---------- |
+| - nome     |
+| - sexo     |
+| - idade    |
+| ---------  |
+|+fazerAniv()|
+
+|   **Aluno**   |
+| ------------- |
+|  - matrícula  |
+|  - curso      |
+| ------------  |
+| +cancelarMat()|
+
+|  **Professor** |
+| -------------- |
+|  - salário     |
+|  -especialidade|
+| -------------- |
+| +receberAume() | 
+
+|   **Aluno**   |
+| ------------- |
+|  -trabalhando |
+|  - setor      |
+| ------------  |
+| +mudarTrabal()|
 
 - Utilizando os conceitos de herança acima, teremos uma classe pessoa que irá ser extendida para as classes Aluno, Professor e Funcionário, sendo assim as três classes (Aluno, Professor e Funcionário) irão herdar os atributor e métodos da classe Pessoa. 
 
